@@ -37,7 +37,8 @@ app.use('/api/product', productRouter);
 //     err => { console.log('Cannot connect to the database' + err) }
 // );
 
-const server = app.listen(3000, (err) => {
+const port = process.env.PORT || 3000;
+const server = app.listen(port, (err) => {
     if (err)
         throw err;
     console.log('listening on port 3000');
